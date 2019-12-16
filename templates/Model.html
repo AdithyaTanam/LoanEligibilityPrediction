@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loan Model</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='Template.css') }}">
+</head>
+
+<body>
+<div>
+          <form action = "http://localhost:5001/LoanPredictResult" method = "POST">
+          <p>Loan ID <input type = "text" name = "Loan_ID" /></p>
+          <p>Gender <br> <input type="radio" name="Gender" value="1" checked> Male
+                     <input type="radio" name="Gender" value="0"> Female</p>
+          <p>Married<br> <input type="radio" name="Married" value="1" checked> Yes
+                     <input type="radio" name="Married" value="0"> No</p>
+          <p>Dependents<select name="Dependents">
+                      <option value="0">0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3+</option>
+                      </select></p>
+          <p>Education<br><input type="radio" name="Education" value="1" checked> Graduate
+                     <input type="radio" name="Education" value="0"> Non Graduate<br></p>
+          <p>Self Employed<br><input type="radio" name="Self_Employed" value="1" checked> Yes
+                     <input type="radio" name="Self_Employed" value="0"> No<br></p>
+          <p>Applicant Income<input type = "text" name = "ApplicantIncome" /></p>
+          <p>Coapplicant Income<input type = "text" name = "CoapplicantIncome" /></p>
+          <p>Loan Amount<input type = "text" name = "LoanAmount" /></p>
+          <p>Loan Amount Term<input type = "text" name = "Loan_Amount_Term" /></p>
+          <p>Credit History<input type = "text" name = "Credit_History" /></p>
+          <p>Property Area<select name="Property_Area">
+                      <option value="0">Rural</option>
+                      <option value="1">Urban</option>
+                      <option value="2">Sub-Urban</option>
+                      </select></p>
+         <p><input type = "submit" value = "submit" /></p>
+      </form>
+</div>
+</body>
+</html>

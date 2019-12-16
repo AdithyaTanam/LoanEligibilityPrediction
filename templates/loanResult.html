@@ -1,0 +1,21 @@
+<html>
+<head>
+	<title>loan Result</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='Template.css') }}">
+</head>
+<body>
+<h1>Result</h1>
+    <table id =loanresult>
+        <tr>
+                <th>Prediction</th>
+                <th>Loan ID -Y/N</th>
+        </tr>
+        {% for k in data['Predictions'] %}
+                <tr>
+                        <td>{{ k['0'] }}</td>
+                        <td>{{ k['1'] }}</td>
+                </tr>
+        {% endfor %}
+</table>
+</body>
+</html>
